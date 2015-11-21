@@ -1,0 +1,40 @@
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+
+.todos-app {  
+  padding: 20px;
+  h1 {
+    text-align: center;
+    font-size: 54px;
+  }
+  .new-todo {
+    margin: 10px;
+    @include display(flex);
+    @include flex-direction(row);
+    *:active, *:focus {
+      outline: 0
+    }
+    input {
+      border: 1px solid black;
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+      @include flex(5);
+    }
+    button {
+      @include flex(1);
+      border: 1px solid black;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+  .todo {
+    padding: 10px;
+    @include display(flex);
+    @include flex-direction(row);
+    span {
+      @include flex(5);
+    }
+    input {
+      @include flex(1);
+    }
+  }
+  
+}
