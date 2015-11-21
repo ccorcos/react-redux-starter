@@ -1,3 +1,23 @@
 @import 'bourbon/app/assets/stylesheets/_bourbon';
 
 // global layout kind of stuff
+
+.input-row {
+  margin: 10px;
+  @include display(flex);
+  @include flex-direction(row);
+  *:active, *:focus {
+    outline: 0
+  }
+  input {
+    border: 1px solid black;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    @include flex(5);
+  }
+  button {
+    @include flex(1);
+    border: 1px solid black;
+    border-radius: 0 5px 5px 0;
+  }
+}

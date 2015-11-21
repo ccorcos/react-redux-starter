@@ -1,5 +1,9 @@
 var webpack = require('webpack');
 
+var definePlugin = new webpack.DefinePlugin({
+  __DEV__: true
+});
+
 module.exports = {
   devtool: 'source-map',
   entry: [
@@ -34,6 +38,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    definePlugin,
     new webpack.HotModuleReplacementPlugin()
   ]
 };

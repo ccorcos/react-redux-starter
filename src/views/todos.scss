@@ -1,0 +1,16 @@
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+
+.todos-app {  
+  .todo {
+    padding: 10px;
+    @include display(flex);
+    @include flex-direction(row);
+    span {
+      @include flex(5);
+    }
+    input {
+      @include flex(1);
+    }
+  }
+  
+}

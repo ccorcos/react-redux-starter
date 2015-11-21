@@ -1,7 +1,10 @@
 # React + Redux Research
 
-- simple todos list
-- use thunk to send network requests
+This app demonstrated React, Redux, Hot Module Replacement (HMR), Webpack, Immutable.js, and the Redux Dev Tools.
+
+# To Do
+
 - wrap up errors
-- start in any state with bootstrapped states
-- record tests
+- styleguide -- all states
+- build distribution files
+- run tests

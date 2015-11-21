@@ -20,3 +20,33 @@ export function changeNewTodoText(e) {
     text: e.target.value
   };
 }
+
+export function changeGifText(e) {
+  return {
+    type: 'CHANGE_GIF_TOPIC_TEXT',
+    text: e.target.value
+  };
+}
+
+export function fetchGif(topic) {
+  return dispatch => {
+    dispatch({
+      type: 'LOADING_GIF',
+    })
+    fetch(`http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=${topic}`)
+      .then(function(response) {
+        return response.json()
+      })
+      .then(function({data}) {
+        dispatch({
+          type: 'NEW_GIF',
+          url: data.image_url
+        })
+      })  
+      .catch(function(error) {
+        return {
+          type: 'ERROR_GIF'
+        }
+      })
+  }
+}
